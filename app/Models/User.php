@@ -46,4 +46,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function media()
+    {
+        return $this->belongsToMany(Media::class)->withTimestamps();
+    }
 }
